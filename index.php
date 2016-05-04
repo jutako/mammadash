@@ -6,15 +6,15 @@ header('Content-Type: text/html; charset=utf-8');
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+
     <title>Data dashboard</title>
 
     <meta http-equiv="refresh" content="300">
-    
+
     <script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
 
     <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    
+
     <style type="text/css">
         body
         {
@@ -25,7 +25,7 @@ header('Content-Type: text/html; charset=utf-8');
             font-size: 40px;
             font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace, sans-serif;
         }
-           	
+
         #main
         {
             width: 975px;
@@ -55,7 +55,7 @@ header('Content-Type: text/html; charset=utf-8');
             left: 0px;
             font-weight: bold;
         }
-        
+
         /*
         #d-rain
         {
@@ -177,31 +177,37 @@ header('Content-Type: text/html; charset=utf-8');
         $.get( "fmi/mast.php", function( data ) {
           $( "#d-mast" ).html( data );
         });
+        /*
         $.get( "fmi/mast-single.php", function( data ) {
           $( "#d-mast-single" ).html( data );
         });
         $.get( "bus/index.php", function( data ) {
           $( "#d-bus" ).html( data );
         });
+        */
         /*
         $.get( "sun/index.php", function( data ) {
           $( "#d-sun" ).html( data );
         });
         */
+        /*
         $.get( "trains/index.php", function( data ) {
           $( "#d-trains" ).html( data );
         });
+        */
         /*
         $.get( "fmi/rain.php", function( data ) {
           $( "#d-rain" ).html( data );
         });
         */
+        /*
         $.get( "linnut-slave/espoolajit.php", function( data ) {
           $( "#d-birds" ).html( data );
         });
+        */
 
     </script>
-    
+
 </head>
 
 <body>
@@ -225,13 +231,15 @@ header('Content-Type: text/html; charset=utf-8');
         <?php include_once "sun/suncalc.php"; ?>
     </div>
 
+    <!--
     <?php if (!isset($_GET['public'])) { ?>
         <img src="fmi/rain.php?image" id="rainmap" />
         <img src="auroras/?loc=HOV" id="aurora_hov" />
         <img src="auroras/?loc=DYN" id="aurora_dyn" />
     <?php } ?>
+    -->
+
 </div>
 
 </body>
 </html>
-

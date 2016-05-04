@@ -2,12 +2,14 @@
 
 //include_once "../../api-key.php";
 $apiKey = "32bf54ef-b708-45ee-8a11-0be182d91aa6"
+echo $apiKey
+
 $url = "http://data.fmi.fi/fmi-apikey/" . $apiKey . "/wfs?request=getFeature&storedquery_id=fmi::observations::weather::mast::multipointcoverage&fmisid=101000&timestep=10&";
 
 $xmlStringWithNamespaces = file_get_contents($url);
 $xmlString = str_replace(":", "_", $xmlStringWithNamespaces);
 
-//echo $xmlString; // debug
+echo $xmlString; // debug
 
 $xml = simplexml_load_string($xmlString);
 
